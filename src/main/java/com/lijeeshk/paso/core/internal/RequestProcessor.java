@@ -1,7 +1,8 @@
 package com.lijeeshk.paso.core.internal;
 
-import io.netty.handler.codec.http.FullHttpResponse;
 import rx.Observable;
+
+import javax.annotation.Nonnull;
 
 /**
  *
@@ -9,5 +10,5 @@ import rx.Observable;
  */
 public interface RequestProcessor {
 
-    Observable<FullHttpResponse> process(final ServiceRequestContext serviceRequestContext);
+    Observable<ServiceResponse> process(@Nonnull final ServiceRequest serviceRequest);
 }

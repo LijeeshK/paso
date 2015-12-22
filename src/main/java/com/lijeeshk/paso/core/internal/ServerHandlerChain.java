@@ -27,7 +27,6 @@ public class ServerHandlerChain extends ChannelInitializer<SocketChannel> {
         }
 
         ch.pipeline().addLast(new HttpServerCodec(), new HttpObjectAggregator(maxContentSize));
-
-
     }
+
 }
